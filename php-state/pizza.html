@@ -1,0 +1,53 @@
+<html>
+        <head>
+                <title>Simple Pizza Form</title>
+        </head>
+
+        <body>
+                <p>Mamma Mia Pizzeria</p>
+                <p>Order info.</p>
+                <form method="GET" id="customerinfo" action="pizza_order.php">
+                        <input type="hidden" name="secret" value="dont tell anyone" />
+                        <label>First name:</label>
+                        <input type="text" name="fname"><br />
+                        <label>Last name:</label>
+                        <input type="text" name="lname"><br />
+                        <br />
+
+                        <label>Ingredients (each one costs 0.50 cents if more than 3 are selected)</label><br />
+                        Prosciutto <input name="topping['prosciutto']" type="checkbox"> 
+                        Pepperoni<input name="topping['pepperoni']" type="checkbox">
+                        Pineapple<input name="topping['pineapple']" type="checkbox"><br />
+                        Avocado<input name="topping['avocado']" type="checkbox">
+                        Onion<input name="topping['onion']" type="checkbox">
+                        Bacon<input name="topping['bacon']" type="checkbox"><br />
+                        Mozzarella <input name="topping['mozzarella']" type="checkbox">
+                        Basil <input name="topping['basil']" type="checkbox">
+                        Mushrooms <input name="topping['oregano']" type="checkbox"> <br />
+                        Oregano <input name="topping['oregano']" type="checkbox"> 
+                        Olives <input name="topping['olives']" type="checkbox">
+                        Jalapeno <input name="topping['jalapeno']" type="checkbox"><br />
+                        <br />
+
+                        <p>Payment type</p>
+                        Cash<input name="payment" value="cash" type="radio">
+                        Check<input name="payment" value="check" type="radio"><br />
+                        <br /> 
+
+                        <p>Previous service:</p>
+                        <select name="satisfaction">
+                                <option value="excellent" selected>Excellent</option>
+                                <option value="good">Good</option>
+                                <option value="acceptable"> Acceptable</option>
+                                <option value="bad">Bad</option>
+                                <option value="terrible">Terrible</option>
+                        </select>
+
+                        <p>Your hidden opinion:</p>
+                        <input name="opinion" type="password">
+                        <br />
+                        <br />
+                        <input name="submit" type="submit" value="Send order!">
+                </form>
+        </body>
+</html>
